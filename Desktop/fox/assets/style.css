@@ -1,0 +1,209 @@
+/* FoxInventory - สไตล์ตามภาพตัวอย่าง: แถบหัวดำมุมมน, การ์ดขาวมีเงา, ปุ่ม/ป้ายสีพาสเทล */
+:root {
+  --ink: #000;
+  --paper: #fff;
+  --page: #f4f4f5;
+  --line: #d9d9dc;
+  --zebra: #f2f2f3;
+  --head-gray: #e6e6e8;
+  --green: #b9dd9f;
+  --yellow: #ffe45c;
+  --red: #ff8f8f;
+  --blue: #8fa8f2;
+  --muted: #6b6b70;
+  --shadow: 0 2px 10px rgba(0, 0, 0, .13);
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: 'Poppins', 'Noto Sans Thai', system-ui, sans-serif;
+  font-size: .92rem;
+}
+a { color: inherit; }
+a:hover { color: inherit; text-decoration: none; }
+label { font-weight: 500; font-size: .85rem; margin-bottom: .25rem; }
+
+:focus-visible { outline: 3px solid #4f86f7 !important; outline-offset: 2px; }
+
+/* ---------- แถบเมนู ---------- */
+.fox-nav { background: var(--ink); }
+.fox-nav .navbar-brand { font-weight: 700; letter-spacing: .2px; }
+.fox-nav .nav-link { font-weight: 500; color: #d8d8d8 !important; }
+.fox-nav .nav-item.active .nav-link,
+.fox-nav .nav-link:hover { color: #fff !important; }
+.fox-nav .nav-item.active .nav-link { border-bottom: 2px solid #fff; }
+
+/* ---------- ป้ายชื่อหน้า ---------- */
+.page-pill {
+  display: inline-block;
+  margin: 0 0 1.1rem;
+  padding: .15rem 1.3rem .25rem;
+  background: var(--ink);
+  color: #fff;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.35;
+  border-radius: 999px;
+}
+
+/* ---------- การ์ด ---------- */
+.fox-card {
+  background: var(--paper);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.fox-card-body { padding: 1rem 1.1rem 1.1rem; }
+.tab-head {
+  margin: 0;
+  padding: .55rem 1.1rem;
+  background: var(--ink);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 0 0 22px 0;
+  display: block;
+}
+.sub-head { font-size: 1rem; font-weight: 600; margin: 1rem 0 .75rem; }
+.empty-note { color: var(--muted); margin: .5rem 0; }
+
+/* ---------- Dashboard ---------- */
+.info-line { padding: .35rem 0 .35rem .8rem; border-left: 2px solid var(--line); margin-bottom: .7rem; }
+.info-label { display: block; color: var(--muted); font-size: .85rem; }
+.info-value { display: block; font-size: 1.25rem; font-weight: 600; }
+.stat-box {
+  display: block; text-align: center; padding: .8rem .5rem;
+  border: 1px solid var(--line); border-radius: 16px; background: #fff;
+}
+.stat-box:hover { border-color: var(--ink); }
+.stat-label { display: block; font-size: .85rem; color: var(--muted); }
+.stat-value { display: block; font-size: 1.1rem; font-weight: 600; word-break: break-word; }
+.chart-box { position: relative; height: 300px; }
+
+/* ---------- ปุ่ม ---------- */
+.btn-fox {
+  border: 0; border-radius: 8px; font-weight: 600; color: var(--ink);
+  padding: .4rem 1rem; font-size: .88rem;
+}
+.btn-fox.btn-sm { padding: .15rem .6rem; font-size: .75rem; border-radius: 6px; }
+.btn-fox.btn-xs { padding: .05rem .5rem; font-size: .9rem; line-height: 1.4; }
+.btn-fox.btn-lg { font-size: 1rem; padding: .55rem 1rem; }
+.btn-fox:hover { color: var(--ink); filter: brightness(.95); }
+.btn-fox:disabled { opacity: .5; cursor: not-allowed; }
+.btn-green  { background: var(--green); }
+.btn-yellow { background: var(--yellow); }
+.btn-red    { background: var(--red); }
+.btn-blue   { background: var(--blue); }
+.btn-gray   { background: #e2e2e5; }
+.btn-white  { background: #fff; border: 1px solid var(--line); }
+.btn-black  { background: var(--ink); color: #fff; }
+.btn-black:hover { color: #fff; }
+
+/* ---------- ป้าย ---------- */
+.badge { font-weight: 600; padding: .3em .65em; border-radius: 6px; font-size: .72rem; color: var(--ink); }
+.badge-fox-green { background: var(--green); }
+.badge-fox-red   { background: var(--red); }
+.badge-fox-blue  { background: var(--blue); }
+.badge-fox-gray  { background: #dcdce0; }
+
+/* ---------- ตาราง ---------- */
+.fox-table { font-size: .82rem; }
+.fox-table thead th {
+  background: var(--head-gray); border-top: 0; border-bottom: 1px solid var(--line);
+  font-size: .72rem; font-weight: 600; text-transform: uppercase; white-space: nowrap;
+}
+.fox-table td { vertical-align: middle; border-top: 1px solid var(--line); }
+.fox-table tbody tr:nth-child(even) { background: var(--zebra); }
+.fox-table .sku-note { font-size: .7rem; color: var(--muted); }
+.row-deleted td { opacity: .55; }
+.row-deleted td:last-child { opacity: 1; }
+
+/* ---------- ฟอร์ม ---------- */
+.form-control { border-radius: 6px; border: 1px solid var(--line); font-size: .88rem; }
+.form-control:focus { border-color: var(--ink); box-shadow: none; }
+.search-box { max-width: 460px; }
+.search-box .input-group-text { background: #f0f0f2; border-color: var(--line); }
+
+/* ---------- Cashier ---------- */
+.product-card {
+  border: 1px solid #8d8d92; border-radius: 12px; padding: .7rem .75rem; background: #fff;
+  font-size: .8rem;
+}
+.product-card-hit { border: 2px solid var(--green); }
+.pc-name { font-weight: 600; font-size: .88rem; margin-bottom: .2rem; word-break: break-word; }
+.pc-meta { color: var(--muted); font-size: .72rem; line-height: 1.35; }
+.pc-price { color: #e03131; font-weight: 700; margin: .3rem 0 0; }
+.pc-stock { color: var(--muted); font-size: .72rem; margin-bottom: .5rem; }
+.qty-input { max-width: 4.2rem; }
+
+.cart-count {
+  display: inline-block; min-width: 1.5rem; padding: 0 .4rem; margin-left: .3rem;
+  background: #fff; color: var(--ink); border-radius: 5px; font-size: .85rem; text-align: center;
+}
+.cart-time { padding: .4rem 1.1rem; background: #efeff1; color: var(--muted); font-size: .75rem; }
+.cart-scroll { max-height: 360px; overflow-y: auto; }
+.cart-table thead th { font-size: .7rem; border-top: 0; background: #f0f0f2; }
+.cart-table td { vertical-align: middle; }
+.cart-qty { width: 4.5rem; }
+.cart-total {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-top: .8rem; padding-top: .6rem; border-top: 1px solid var(--line); font-size: 1.05rem;
+}
+.fox-toast { position: fixed; top: 70px; right: 16px; width: min(320px, calc(100% - 32px)); z-index: 2000; box-shadow: var(--shadow); }
+
+/* ---------- Receipt ---------- */
+.receipt-title { text-align: center; font-weight: 700; font-size: 1.25rem; letter-spacing: .5px; }
+.receipt-no { text-align: center; font-size: 1.05rem; padding-bottom: .5rem; border-bottom: 1px solid var(--ink); margin-bottom: .8rem; word-break: break-all; }
+.receipt-table thead th { font-size: .72rem; border-top: 0; border-bottom: 1px solid var(--line); }
+.receipt-total { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--line); padding-top: .6rem; font-size: 1rem; }
+.receipt-total strong { color: #e03131; font-size: 1.15rem; }
+.receipt-meta { text-align: center; color: var(--muted); font-size: .78rem; margin: 1.1rem 0; }
+
+/* ---------- Summary ---------- */
+.summary-totals { font-size: 1rem; margin-bottom: 1rem; }
+.summary-totals strong { font-weight: 700; }
+
+/* ---------- พิมพ์ใบเสร็จ ---------- */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  .fox-card { box-shadow: none; }
+  main.container { max-width: 100%; padding: 0; }
+}
+
+@media (max-width: 575.98px) {
+  .page-pill { font-size: 1.25rem; }
+  .chart-box { height: 260px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ---------- ปุ่มย้อนกลับ (วงกลมดำ ลูกศรซ้าย) ---------- */
+.page-top { display: flex; align-items: center; margin: 0 0 1.1rem; }
+.page-top .page-pill { margin: 0; }
+.back-btn {
+  flex: 0 0 auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; margin-right: .7rem;
+  background: var(--ink); border-radius: 50%;
+  box-shadow: var(--shadow);
+  transition: transform .12s ease;
+}
+.back-btn:hover { transform: translateX(-2px); }
+.back-btn:active { transform: scale(.94); }
+@media (max-width: 575.98px) { .back-btn { width: 38px; height: 38px; margin-right: .55rem; } }
+
+/* ---------- เมนูผู้ใช้ ---------- */
+.nav-user { margin: 0; }
+@media (max-width: 991.98px) { .nav-user { padding: .5rem 0; } }
+
+/* ---------- หน้า login / register ---------- */
+.auth-body { min-height: 100vh; }
+.auth-wrap { max-width: 400px; margin: 0 auto; padding: 8vh 1rem 2rem; }
+.auth-brand { text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 1.2rem; }
+.auth-alert { border-radius: 10px; }
+.auth-switch { text-align: center; margin: 1rem 0 0; color: var(--muted); font-size: .85rem; }
+.auth-switch a { color: var(--ink); font-weight: 600; text-decoration: underline; }
+.auth-wrap .tab-head { font-size: 1.1rem; }
