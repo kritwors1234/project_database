@@ -1,0 +1,11 @@
+# ตัวอย่างการตั้งรหัสผ่านชั่วคราวให้ทั้งเว็บ (ใช้ระหว่างที่ยังไม่มีระบบ login)
+# วิธีใช้:
+#  1) สร้างไฟล์รหัสผ่านชื่อ .htpasswd (สร้างจากหน้า "Directory Privacy"/"Password Protect" ของโฮสต์ หรือเครื่องมือสร้าง htpasswd)
+#  2) แก้ AuthUserFile ให้เป็น "พาธเต็มบนเซิร์ฟเวอร์" ของไฟล์ .htpasswd (วางไว้นอกโฟลเดอร์เว็บถ้าทำได้)
+#  3) เปลี่ยนชื่อไฟล์นี้เป็น .htaccess  (ถ้าใส่พาธผิด เว็บจะขึ้น Error 500 ให้ลบไฟล์ .htaccess ออกก่อน)
+# ถ้าเซิร์ฟเวอร์ไม่ใช่ Apache ไฟล์นี้จะไม่มีผล
+
+AuthType Basic
+AuthName "FoxInventory"
+AuthUserFile /พาธเต็ม/ไปยัง/.htpasswd
+Require valid-user

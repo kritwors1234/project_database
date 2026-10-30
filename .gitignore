@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/
+.idea/
+config/db.local.php
